@@ -1,0 +1,28 @@
+{
+  "name": "pho_",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm install --prefix client && npm install --prefix server",
+    "start": "concurrently \"npm run build\" \"npm start --prefix server\" \"npm run dev --prefix client\"",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "clean": "rm -rf node_modules package-lock.json client/dist client/node_modules client/package-lock.json server/dist server/node_modules server/package-lock.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrismhurley/pho_.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrismhurley/pho_/issues"
+  },
+  "homepage": "https://github.com/harrismhurley/pho_#readme",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
